@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-ts-movie-db/static/css/main.88ac2af4.css",
+    "main.js": "/react-ts-movie-db/static/js/main.053f600e.js",
+    "index.html": "/react-ts-movie-db/index.html",
+    "main.88ac2af4.css.map": "/react-ts-movie-db/static/css/main.88ac2af4.css.map",
+    "main.053f600e.js.map": "/react-ts-movie-db/static/js/main.053f600e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88ac2af4.css",
+    "static/js/main.053f600e.js"
+  ]
+}
