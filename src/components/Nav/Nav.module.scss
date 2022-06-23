@@ -1,0 +1,110 @@
+@import "@styles/variables.scss";
+
+.navbar {
+  background: transparent;
+  /* outline */
+  text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+  /* Navbar will stay on top */
+  position: fixed;
+  /* Navbar will show above all layers */
+  z-index: 999;
+  width: 100%;
+  padding: 1em 6em;
+  /* Flex allows me to add responsive design later */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* This allows me to dictate the space used within a container's horizontal axis */
+  justify-content: space-between;
+}
+
+.navbar.active {
+  background: rgb(15, 15, 15);
+  /* Fade in */
+  transition-timing-function: ease;
+  /* Fade time */
+  transition: 0.5s;
+
+  form {
+    background: rgb(51, 51, 51);
+    opacity: 1;
+    /* Fade in */
+    transition-timing-function: ease;
+    /* Fade time */
+    transition: 0.5s;
+  }
+}
+
+.logo {
+  /* This removes the underline */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5em;
+
+  /* This allows me to change the color/attributes of text */
+  .logoSpan {
+    color: $main-color;
+  }
+}
+
+form {
+  display: flex;
+  background: rgb(51, 51, 51, 0.6);
+  opacity: 0.4;
+  height: 40px;
+  /* This gives a border */
+  border: 1px solid $main-color;
+  /* This gives curve to the edges */
+  border-radius: 5em;
+  padding: 0 1em;
+}
+
+/* When hovering over the form, make it opaque */
+form:hover {
+  opacity: 1;
+}
+
+/* When the from has an input, make it opaque */
+form:valid {
+  opacity: 1;
+}
+
+.searchForm {
+  height: 100%;
+  width: 15vw;
+  padding: 0 20px;
+  background: none;
+  border: none;
+  color: $main-color;
+}
+
+.navButton {
+  padding: 1em;
+  height: 100%;
+  display: inline-block;
+  /* I can fetch an svg directly from a url */
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNIDIxIDMgQyAxMS42MDE1NjMgMyA0IDEwLjYwMTU2MyA0IDIwIEMgNCAyOS4zOTg0MzggMTEuNjAxNTYzIDM3IDIxIDM3IEMgMjQuMzU1NDY5IDM3IDI3LjQ2MDkzOCAzNi4wMTU2MjUgMzAuMDkzNzUgMzQuMzQzNzUgTCA0Mi4zNzUgNDYuNjI1IEwgNDYuNjI1IDQyLjM3NSBMIDM0LjUgMzAuMjgxMjUgQyAzNi42Nzk2ODggMjcuNDIxODc1IDM4IDIzLjg3ODkwNiAzOCAyMCBDIDM4IDEwLjYwMTU2MyAzMC4zOTg0MzggMyAyMSAzIFogTSAyMSA3IEMgMjguMTk5MjE5IDcgMzQgMTIuODAwNzgxIDM0IDIwIEMgMzQgMjcuMTk5MjE5IDI4LjE5OTIxOSAzMyAyMSAzMyBDIDEzLjgwMDc4MSAzMyA4IDI3LjE5OTIxOSA4IDIwIEMgOCAxMi44MDA3ODEgMTMuODAwNzgxIDcgMjEgNyBaIj48L3BhdGg+PC9zdmc+")
+    50% 50% no-repeat;
+  background-size: 70%;
+  border: none;
+  /* This changes the cursor to a pointer on hover */
+  cursor: pointer;
+}
+
+@media (max-width: 895px) {
+  /* Hide the search bar when window is too small */
+  form {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .logoSpan {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,60 @@
+@import "@styles/variables.scss";
+
+.footer {
+  background: rgb(15, 15, 15, 0.6);
+  /* Footer will stay on bottom */
+  position: fixed;
+  bottom: 0;
+  /* Footer will show above all layers */
+  z-index: 999;
+  width: 100%;
+  padding: 1em 6em;
+  /* Flex allows me to add responsive design later */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* This allows me to dictate the space used within a container's horizontal axis */
+  justify-content: space-between;
+}
+
+.footerForm {
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  background: rgb(51, 51, 51, 0.6);
+  opacity: 0.4;
+  height: 40px;
+  /* This gives a border */
+  border: 1px solid $main-color;
+  /* This gives curve to the edges */
+  border-radius: 5em;
+  padding: 0 1em;
+}
+
+.searchFooterForm {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+  background: none;
+  border: none;
+  color: $main-color;
+}
+
+.footerButton {
+  padding: 1em;
+  height: 100%;
+  /* I can fetch an svg directly from a url */
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNIDIxIDMgQyAxMS42MDE1NjMgMyA0IDEwLjYwMTU2MyA0IDIwIEMgNCAyOS4zOTg0MzggMTEuNjAxNTYzIDM3IDIxIDM3IEMgMjQuMzU1NDY5IDM3IDI3LjQ2MDkzOCAzNi4wMTU2MjUgMzAuMDkzNzUgMzQuMzQzNzUgTCA0Mi4zNzUgNDYuNjI1IEwgNDYuNjI1IDQyLjM3NSBMIDM0LjUgMzAuMjgxMjUgQyAzNi42Nzk2ODggMjcuNDIxODc1IDM4IDIzLjg3ODkwNiAzOCAyMCBDIDM4IDEwLjYwMTU2MyAzMC4zOTg0MzggMyAyMSAzIFogTSAyMSA3IEMgMjguMTk5MjE5IDcgMzQgMTIuODAwNzgxIDM0IDIwIEMgMzQgMjcuMTk5MjE5IDI4LjE5OTIxOSAzMyAyMSAzMyBDIDEzLjgwMDc4MSAzMyA4IDI3LjE5OTIxOSA4IDIwIEMgOCAxMi44MDA3ODEgMTMuODAwNzgxIDcgMjEgNyBaIj48L3BhdGg+PC9zdmc+")
+    50% 50% no-repeat;
+  background-size: 70%;
+  border: none;
+  /* This changes the cursor to a pointer on hover */
+  cursor: pointer;
+}
+
+@media (min-width: 895px) {
+  .footer {
+    display: none;
+  }
+}

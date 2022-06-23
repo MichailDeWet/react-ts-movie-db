@@ -1,0 +1,7 @@
+node_modules/**
+/dist
+src/figma/**
+src/**/*.js
+.eslintrc.js
+craco.config.js
+declaration.d.ts

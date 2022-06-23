@@ -1,0 +1,37 @@
+.list {
+  max-width: 100%;
+  padding: 0.5em 1.5em;
+  margin-left: 0;
+  margin-right: auto;
+
+  display: grid;
+  gap: 25px;
+
+  /* This puts 5 movies in each row. */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto-fill);
+}
+
+@media (max-width: 895px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 555px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 375px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .list {
+    grid-template-columns: none;
+  }
+}

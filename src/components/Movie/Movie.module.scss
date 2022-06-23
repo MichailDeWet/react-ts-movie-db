@@ -1,0 +1,177 @@
+@import "@styles/variables";
+
+.posterParent {
+  position: relative;
+}
+
+.moviePoster {
+  max-width: 100%;
+  width: 300px;
+  min-height: 150px;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+/* This will reserve a space on the page for the image that is still loading */
+.skeletonPoster {
+  height: 24.8vw;
+  opacity: 0.4;
+  animation: skeleton 1s linear infinite alternate;
+}
+
+.skeletonCast {
+  height: 150px;
+  opacity: 0.4;
+  animation: skeleton 1s linear infinite alternate;
+}
+
+/* This creates the animation that each skeleton has */
+@keyframes skeleton {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+.castPoster {
+  height: 150px;
+  cursor: pointer;
+}
+
+.movieExtraDetails {
+  display: none;
+}
+
+.movieCard:hover {
+  /* Make the poster bigger */
+  transform: translateY(2%) scale(1.13);
+  /* Do not snap to size, instead zoom in */
+  transition: ease-out 0.4s;
+  border: 4px inset $main-color;
+  border-radius: 1em;
+  cursor: pointer;
+
+  .movieExtraDetails {
+    margin: 10% 5%;
+    display: block;
+    top: 0;
+    position: fixed;
+    /* All-round shadow */
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  }
+
+  /* Amount of overview to display */
+  .movieOverview {
+    overflow: hidden;
+    display: -webkit-box;
+    /* Number of lines */
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+  }
+
+  .moviePoster {
+    border-radius: 1em;
+    filter: blur(5px) brightness(50%);
+  }
+}
+
+.movieCard:hover ~ .movieDetails {
+  display: none;
+}
+
+.movieDetails {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieTitle {
+  text-align: left;
+  width: 75%;
+  padding-left: 1%;
+}
+
+.movieDate {
+  position: relative;
+  bottom: 0;
+  height: 100%;
+  border: 1px solid rgb(113, 113, 113);
+  border-radius: 0.4em;
+  padding: 0 1em;
+  background-color: rgb(20, 20, 20);
+}
+
+.cast {
+  cursor: default;
+  max-width: 80%;
+  min-width: 100px;
+  border-radius: 10em;
+}
+
+.castDetails {
+  display: inline-block;
+  text-align: center;
+
+  .metaDetails {
+    color: rgb(162, 162, 162);
+    font-style: italic;
+  }
+}
+
+@media (max-width: 1440px) {
+  .movieCard:hover {
+    .movieOverview {
+      -webkit-line-clamp: 6;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .movieCard:hover {
+    .movieOverview {
+      -webkit-line-clamp: 5;
+    }
+  }
+}
+
+@media (max-width: 1215px) {
+  .movieCard:hover {
+    .movieOverview {
+      -webkit-line-clamp: 4;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .movieDate {
+    display: none;
+  }
+
+  .movieTitle {
+    width: 100%;
+  }
+
+  .movieCard:hover {
+    .movieOverview {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 840px) {
+  .movieCard:hover {
+    border: none;
+
+    .movieExtraDetails {
+      display: none;
+    }
+
+    .moviePoster {
+      filter: none;
+      border: 4px inset $main-color;
+    }
+  }
+}

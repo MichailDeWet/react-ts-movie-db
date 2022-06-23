@@ -1,0 +1,72 @@
+{
+  "homepage": "https://MichailDeWet.github.io/react-ts-movie-db/",
+  "name": "movie-db-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@craco/craco": "^7.0.0-alpha.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "ajv": "^8.11.0",
+    "ajv-keywords": "^5.1.0",
+    "axios": "^0.27.2",
+    "eslint": "^8.17.0",
+    "framer-motion": "^6.3.3",
+    "gh-pages": "^4.0.0",
+    "loadash": "^1.0.0",
+    "prettier": "^2.6.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
+    "react-intersection-observer": "^8.32.1",
+    "react-progressive-graceful-image": "^0.6.14",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "react-youtube": "^9.0.2",
+    "styled-components": "^5.1.1",
+    "svgo": "^2.8.0",
+    "typescript": "^4.6.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "craco-alias": "^3.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "sass": "^1.52.2"
+  }
+}

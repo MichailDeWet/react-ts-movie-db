@@ -1,0 +1,33 @@
+/* These styles are applied globally */
+
+/* This style is applied to every single tag/class until overwritten */
+* {
+  /* A nicer font since no-one like the default flavour */
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  /* This takes margin and padding into account when sizing */
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: black;
+  padding-bottom: 6em;
+}
+
+ul {
+  margin: 0;
+  padding: 0 10px;
+  list-style-type: none;
+}
+
+/* Media queries are conditional styles, this says that if the width of the window/screen
+ * is >= 425 pixels, then apply a small font size
+ */
+@media (max-width: 425px) {
+  * {
+    font-size: small;
+  }
+}

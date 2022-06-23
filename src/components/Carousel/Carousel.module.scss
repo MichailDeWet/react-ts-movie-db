@@ -1,0 +1,43 @@
+.categoryHeading {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+.carousel {
+  max-width: 100%;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin-left: 0;
+  margin-right: auto;
+
+  display: grid;
+  gap: 15px;
+
+  /* This puts all of the movie cards horizontally */
+  grid-auto-flow: column;
+  /* This sizes the columns (each movie card) */
+  grid-auto-columns: 17%;
+  /* This allows you to scroll in the component, without scrolling the entire page. */
+  overflow-x: auto;
+  /* This stops you from overscrolling (prevents unwanted behavior when you use touch controls). */
+  overscroll-behavior-inline: contain;
+}
+
+.carousel::-webkit-scrollbar {
+  /* Hides the ugly scrollbar */
+  display: none;
+}
+
+.carouselCast {
+  max-width: min-content;
+  display: flex;
+  grid-auto-columns: 7%;
+}
+
+/* Do not get smaller once size is <= 760 pixels*/
+@media (max-width: 760px) {
+  .carousel {
+    display: flex;
+  }
+}

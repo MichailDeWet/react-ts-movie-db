@@ -1,0 +1,99 @@
+@import "@styles/variables.scss";
+
+.hero {
+  position: relative;
+  height: 600px;
+  padding-left: 6em;
+  background-position: top center;
+  /* The background will not repeat */
+  background-size: cover;
+  /* Just to make the text over the background more readable. */
+  text-shadow: 2px 2px 3px black;
+  display: flex;
+  align-items: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(180deg, transparent, black);
+}
+
+h1 {
+  font-size: xx-large;
+  padding-bottom: 1em;
+}
+
+.heroOverview {
+  padding: 1em 0;
+  width: 75%;
+}
+
+.heroPosterCover {
+  width: 15%;
+  padding-right: 1.5em;
+}
+
+/* Media player */
+.youtubeTrailer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* Show, hide trailer button */
+.ctaButton {
+  background: none;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+  padding: 0.5em 0.75em;
+  border-radius: 5em;
+  display: inline-block;
+  margin-top: 1em;
+  border: 1px solid $main-color;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background: $main-color;
+  text-shadow: none;
+  color: black;
+}
+
+.genre {
+  padding: 0;
+  display: flex;
+  grid-auto-flow: column;
+  gap: 4px;
+}
+
+.heroTitle {
+  padding-bottom: 0;
+}
+
+@media (max-width: 1350px) {
+  .heroPosterCover {
+    display: none;
+  }
+}
+
+@media (max-width: 815px) {
+  .hero {
+    padding: 0 4em;
+  }
+
+  .heroOverview {
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+}
