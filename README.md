@@ -1,3 +1,7 @@
+# Hosted with GH actions
+
+[Movie Database](https://michaildewet.github.io/react-ts-movie-db/) hosted site.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
